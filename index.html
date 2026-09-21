@@ -24,8 +24,6 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
   font-family:-apple-system,"PingFang SC","Microsoft YaHei",Roboto,sans-serif;
   overscroll-behavior-y:none;}
 body{padding-bottom:86px; max-width:520px; margin:0 auto;}
-
-/* ===== 顶部 ===== */
 header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,#0f1115 70%,rgba(15,17,21,.9));
   padding:14px 16px 10px;}
 .title-row{display:flex;align-items:center;justify-content:space-between;}
@@ -33,8 +31,6 @@ h1{font-size:19px;margin:0;font-weight:700;}
 .month-switch{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;}
 .month-switch button{background:var(--card);border:1px solid var(--line);color:var(--text);
   width:30px;height:30px;border-radius:9px;font-size:16px;line-height:1;}
-
-/* ===== 总览卡片 ===== */
 .overview{margin:10px 16px 0;background:linear-gradient(135deg,#16b981,#0d9488);
   border-radius:18px;padding:16px;}
 .balance-label{font-size:12px;opacity:.85;}
@@ -44,8 +40,6 @@ h1{font-size:19px;margin:0;font-weight:700;}
 .ov-item+.ov-item{border-left:1px solid rgba(255,255,255,.25);}
 .ov-item .lb{font-size:11px;opacity:.85;}
 .ov-item .vl{font-size:16px;font-weight:700;margin-top:2px;}
-
-/* ===== 分类占比 ===== */
 .panel{margin:14px 16px 0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;}
 .panel h3{margin:0 0 10px;font-size:14px;font-weight:600;color:var(--sub);}
 .bar{height:10px;border-radius:6px;background:var(--card2);display:flex;overflow:hidden;margin-bottom:12px;}
@@ -57,8 +51,6 @@ h1{font-size:19px;margin:0;font-weight:700;}
 .cat-pct{width:44px;text-align:right;color:var(--sub);font-size:12px;margin:0 8px;}
 .cat-amt{width:88px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;}
 .empty-tip{text-align:center;color:var(--sub);font-size:13px;padding:18px 0;}
-
-/* ===== 记录列表 ===== */
 .records{margin:14px 16px 0;}
 .day-group{margin-bottom:10px;}
 .day-head{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);padding:6px 4px;}
@@ -76,8 +68,6 @@ h1{font-size:19px;margin:0;font-weight:700;}
 .rec-actions button{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);
   background:var(--card2);color:var(--sub);font-size:15px;}
 .swipe-hint{font-size:11px;color:var(--sub);text-align:center;margin:4px 0 8px;}
-
-/* ===== 底部导航 ===== */
 .tabbar{position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);
   border-top:1px solid var(--line);display:flex;max-width:520px;margin:0 auto;
   padding-bottom:env(safe-area-inset-bottom);}
@@ -88,8 +78,6 @@ h1{font-size:19px;margin:0;font-weight:700;}
 .add-fab button{position:absolute;top:-26px;left:50%;transform:translateX(-50%);
   width:56px;height:56px;border-radius:50%;border:none;background:linear-gradient(135deg,#10b981,#0d9488);
   color:#fff;font-size:30px;box-shadow:0 8px 24px rgba(16,185,129,.4);line-height:1;}
-
-/* ===== 弹层 ===== */
 .mask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:40;display:none;}
 .mask.show{display:block;}
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--bg);
@@ -100,54 +88,42 @@ h1{font-size:19px;margin:0;font-weight:700;}
 .sheet-head h2{margin:0;font-size:17px;}
 .sheet-head .close{background:none;border:none;color:var(--sub);font-size:24px;}
 .sheet-body{padding:0 16px 20px;}
-
 .type-toggle{display:flex;background:var(--card);border-radius:12px;padding:4px;margin-bottom:14px;}
 .type-toggle button{flex:1;padding:10px;border:none;background:transparent;color:var(--sub);
   border-radius:9px;font-size:14px;font-weight:600;}
 .type-toggle button.on-exp{background:var(--red);color:#fff;}
 .type-toggle button.on-inc{background:var(--green);color:#fff;}
-
 .amount-box{background:var(--card);border:1px solid var(--line);border-radius:14px;
   padding:14px;display:flex;align-items:baseline;margin-bottom:14px;}
 .amount-box .cur{font-size:22px;color:var(--sub);margin-right:6px;}
 .amount-box input{flex:1;background:none;border:none;outline:none;color:var(--text);
   font-size:32px;font-weight:700;font-variant-numeric:tabular-nums;}
-
 .field-lb{font-size:13px;color:var(--sub);margin:12px 0 8px;}
 .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
 .cat-grid .ci{text-align:center;}
 .cat-grid .ci .ico{width:46px;height:46px;margin:0 auto 4px;border-radius:14px;background:var(--card);
   border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:21px;}
 .cat-grid .ci.sel .ico{border-color:var(--green);background:rgba(16,185,129,.15);}
-.cat-grid .ci span{font-size:11px;color:var(--sub);}
 .cat-grid .ci.sel span{color:var(--green);}
 .ci.add{opacity:.8;}
 .ci.add .ico{border-style:dashed;color:var(--sub);font-size:22px;}
-
-textarea,select,input[type=date],input[type=text]{width:100%;background:var(--card);
+textarea,select,input[type=date],input[type=text],input[type=number]{width:100%;background:var(--card);
   border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px;font-size:14px;
   outline:none;font-family:inherit;}
 textarea{resize:none;height:64px;}
-
 .btn{width:100%;padding:15px;border:none;border-radius:14px;background:linear-gradient(135deg,#10b981,#0d9488);
   color:#fff;font-size:16px;font-weight:700;margin-top:16px;}
 .btn.gray{background:var(--card2);color:var(--text);}
 .btn.danger{background:var(--red);}
-
-/* 数字键盘 */
 .keypad{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px;}
 .keypad button{padding:16px;border-radius:12px;border:1px solid var(--line);background:var(--card);
   color:var(--text);font-size:19px;font-weight:600;}
 .keypad button.fn{color:var(--amber);}
 .keypad button.ok{background:linear-gradient(135deg,#10b981,#0d9488);color:#fff;border:none;grid-row:span 2;}
-
-/* 设置页 */
 .set-item{display:flex;justify-content:space-between;align-items:center;background:var(--card);
   border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;font-size:14px;}
 .set-item .act{color:var(--blue);font-size:13px;}
 .set-item .act.red{color:var(--red);}
-
-/* Toast */
 .toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.85);
   color:#fff;padding:12px 22px;border-radius:12px;font-size:14px;z-index:99;display:none;}
 .toast.show{display:block;animation:pop .2s;}
@@ -155,7 +131,6 @@ textarea{resize:none;height:64px;}
 </style>
 </head>
 <body>
-
 <header>
   <div class="title-row">
     <h1 id="pageTitle">随手记</h1>
@@ -166,8 +141,6 @@ textarea{resize:none;height:64px;}
     </div>
   </div>
 </header>
-
-<!-- ===== 首页：总览 + 列表 ===== -->
 <div id="pageHome">
   <div class="overview">
     <div class="balance-label">本月结余</div>
@@ -178,22 +151,23 @@ textarea{resize:none;height:64px;}
       <div class="ov-item"><div class="lb">记账笔数</div><div class="vl" id="ovCount">0</div></div>
     </div>
   </div>
-
   <div class="panel">
     <h3>支出分类占比</h3>
     <div class="bar" id="catBar"></div>
     <div class="cat-list" id="catList"></div>
   </div>
-
   <div class="records" id="recordList"></div>
   <div class="swipe-hint">点击记录可编辑或删除</div>
 </div>
-
-<!-- ===== 设置页 ===== -->
 <div id="pageSettings" style="display:none">
   <div class="panel" style="margin-top:16px">
     <h3>分类管理</h3>
     <div id="catManage"></div>
+    <div class="field-lb">添加到</div>
+    <select id="catAddType" style="margin-bottom:8px">
+      <option value="expense">支出分类</option>
+      <option value="income">收入分类</option>
+    </select>
     <div style="display:flex;gap:8px;margin-top:10px">
       <input type="text" id="newCatName" placeholder="新分类名称">
       <input type="text" id="newCatIcon" placeholder="表情" style="width:64px" maxlength="2">
@@ -215,17 +189,30 @@ textarea{resize:none;height:64px;}
     </div>
   </div>
 </div>
-
+<!-- ===== 股票页 ===== -->
+<div id="pageStock" style="display:none">
+  <div class="overview" style="background:linear-gradient(135deg,#6366f1,#4f46e5)">
+    <div class="balance-label">股票持仓总览</div>
+    <div class="ov-row" style="margin-top:10px">
+      <div class="ov-item"><div class="lb">持仓股数</div><div class="vl" id="stHold">0</div></div>
+      <div class="ov-item"><div class="lb">持仓成本</div><div class="vl" id="stCost">¥0.00</div></div>
+    </div>
+    <div class="ov-row" style="margin-top:12px;border-top:1px solid rgba(255,255,255,.25);padding-top:12px">
+      <div class="ov-item"><div class="lb">已实现盈亏</div><div class="vl" id="stReal">0.00</div></div>
+      <div class="ov-item"><div class="lb">累计手续费</div><div class="vl" id="stFeeSum">¥0.00</div></div>
+    </div>
+  </div>
+  <div class="records" id="stockBody"></div>
+</div>
 <!-- ===== 底部导航 ===== -->
 <div class="tabbar">
   <div class="tab on" id="tabHome" onclick="switchPage('home')"><span class="ti">📋</span>明细</div>
   <div class="tab" id="tabChart" onclick="switchPage('chart')"><span class="ti">📊</span>统计</div>
-  <div class="tab add-fab"><button onclick="openSheet()">＋</button></div>
+  <div class="tab add-fab"><button onclick="openAdd()">＋</button></div>
+  <div class="tab" id="tabStock" onclick="switchPage('stock')"><span class="ti">📈</span>股票</div>
   <div class="tab" id="tabSettings" onclick="switchPage('settings')"><span class="ti">⚙️</span>设置</div>
 </div>
-
-<!-- ===== 记一笔弹层 ===== -->
-<div class="mask" id="mask" onclick="closeSheet()"></div>
+<div class="mask" id="mask" onclick="closeMask()"></div>
 <div class="sheet" id="sheet">
   <div class="sheet-head"><h2 id="sheetTitle">记一笔</h2>
     <button class="close" onclick="closeSheet()">×</button></div>
@@ -234,10 +221,8 @@ textarea{resize:none;height:64px;}
       <button id="btnExpense" class="on-exp" onclick="setType('expense')">支出</button>
       <button id="btnIncome" onclick="setType('income')">收入</button>
     </div>
-
     <div class="amount-box"><span class="cur">¥</span>
       <input type="text" id="amount" inputmode="decimal" placeholder="0.00" readonly></div>
-
     <div class="keypad">
       <button onclick="pressKey('1')">1</button><button onclick="pressKey('2')">2</button>
       <button onclick="pressKey('3')">3</button><button class="fn" onclick="pressKey('del')">⌫</button>
@@ -249,27 +234,48 @@ textarea{resize:none;height:64px;}
       <button class="fn" onclick="pressKey('clear')">清</button>
     </div>
     <div style="font-size:11px;color:var(--sub);text-align:center;margin-top:6px">「＋」可将多笔金额累加，如 12＋8＝20</div>
-
     <div class="field-lb">选择分类</div>
     <div class="cat-grid" id="catGrid"></div>
-
     <div class="field-lb">日期</div>
     <input type="date" id="recDate">
-
     <div class="field-lb">备注</div>
     <textarea id="recNote" placeholder="点击输入备注（可选）"></textarea>
   </div>
 </div>
-
+<!-- ===== 股票录入弹层 ===== -->
+<div class="sheet" id="stockSheet">
+  <div class="sheet-head"><h2 id="stockFormTitle">记一笔买卖</h2>
+    <button class="close" onclick="closeStockSheet()">×</button></div>
+  <div class="sheet-body">
+    <div class="type-toggle">
+      <button id="btnBuy" class="on-exp" onclick="setDir('buy')">买入</button>
+      <button id="btnSell" onclick="setDir('sell')">卖出</button>
+    </div>
+    <div class="field-lb">股票代码</div>
+    <input type="text" id="stCode" placeholder="如 600519 / AAPL">
+    <div class="field-lb">股票名称</div>
+    <input type="text" id="stName" placeholder="如 贵州茅台">
+    <div style="display:flex;gap:10px">
+      <div style="flex:1"><div class="field-lb">每股价格</div>
+        <input type="number" id="stPrice" inputmode="decimal" placeholder="0.00" step="0.001"></div>
+      <div style="flex:1"><div class="field-lb">股数</div>
+        <input type="number" id="stQty" inputmode="numeric" placeholder="0" step="100"></div>
+    </div>
+    <div style="display:flex;gap:10px">
+      <div style="flex:1"><div class="field-lb">手续费(元)</div>
+        <input type="number" id="stFee" inputmode="decimal" placeholder="0" step="0.01"></div>
+      <div style="flex:1"><div class="field-lb">日期</div>
+        <input type="date" id="stDate"></div>
+    </div>
+    <button class="btn" onclick="saveStockTrade()">保存</button>
+  </div>
+</div>
 <script>
 /* ================= 数据层 ================= */
-/* 兼容老浏览器：structuredClone 兜底 */
 if (typeof structuredClone !== 'function') {
   window.structuredClone = function (o) { return JSON.parse(JSON.stringify(o)); };
 }
-
-const LS_REC='ssj_records_v1', LS_CAT='ssj_categories_v1';
-
+const LS_REC='ssj_records_v1', LS_CAT='ssj_categories_v1', LS_STOCK='ssj_stocks_v1';
 const DEFAULT_CATS={
   expense:[
     {name:'餐饮',icon:'🍜'},{name:'交通',icon:'🚌'},{name:'购物',icon:'🛍️'},
@@ -282,39 +288,51 @@ const DEFAULT_CATS={
     {name:'理财',icon:'📈'},{name:'红包',icon:'🧧'},{name:'其他',icon:'📦'}
   ]
 };
-
 function load(k,def){ try{const v=JSON.parse(localStorage.getItem(k)); return v||structuredClone(def);}catch(e){return structuredClone(def);} }
 function save(k,v){ localStorage.setItem(k,JSON.stringify(v)); }
-
 let records=load(LS_REC,[]);
 let cats=load(LS_CAT,DEFAULT_CATS);
-// 兼容老数据缺分类
 for(const t of ['expense','income'])
   if(!cats[t]||!cats[t].length) cats[t]=structuredClone(DEFAULT_CATS[t]);
-
+let stocks=load(LS_STOCK,[]);
 const COLORS=['#f97316','#ef4444','#8b5cf6','#3b82f6','#06b6d4','#10b981','#eab308','#ec4899','#64748b','#a3e635'];
-
 let curMonth = new Date(); curMonth.setDate(1);
 let curType='expense', curCat=null, editingId=null, curPage='home';
-
 /* ================= 工具 ================= */
 function ym(d){ return d.slice(0,7); }
 function monthStr(dt){ return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0'); }
-function fmt(n){ return '¥'+Number(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
 function esc(s){ return String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function todayStr(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
 function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._tm); t._tm=setTimeout(()=>t.classList.remove('show'),1600); }
-
+function fmt(n){
+  const neg = Number(n) < 0;
+  const s = Math.abs(Number(n)).toLocaleString('en-US',
+      {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  return (neg ? '-¥' : '¥') + s;
+}
+function isMoneyToken(p){
+  if(p === '' || p === '.') return false;
+  const dot = p.indexOf('.');
+  if(dot >= 0 && p.indexOf('.', dot + 1) >= 0) return false;
+  const intPart = dot >= 0 ? p.slice(0, dot) : p;
+  const decPart = dot >= 0 ? p.slice(dot + 1) : '';
+  if(decPart.length > 2) return false;
+  return (intPart + decPart).split('').every(function(ch){ return ch >= '0' && ch <= '9'; });
+}
+function calcAmount(v){
+  if(!v) return NaN;
+  const parts = v.split('+');
+  for(let i = 0; i < parts.length; i++){ if(!isMoneyToken(parts[i])) return NaN; }
+  const sum = parts.reduce(function(s, p){ return s + (parseFloat(p) || 0); }, 0);
+  return Math.round(sum * 100) / 100;
+}
 /* ================= 渲染 ================= */
 function renderAll(){ renderHeader(); renderOverview(); renderChart(); renderRecords(); }
-
 function renderHeader(){
   document.getElementById('monthLabel').textContent =
     curMonth.getFullYear()+'年'+(curMonth.getMonth()+1)+'月';
 }
-
 function monthRecords(){ const m=monthStr(curMonth); return records.filter(r=>ym(r.date)===m); }
-
 function renderOverview(){
   const list=monthRecords();
   const inc=list.filter(r=>r.type==='income').reduce((s,r)=>s+r.amount,0);
@@ -324,8 +342,6 @@ function renderOverview(){
   document.getElementById('ovBalance').textContent=fmt(inc-exp);
   document.getElementById('ovCount').textContent=list.length;
 }
-
-/* 统计（图表页复用首页占比） */
 function renderChart(){
   const exps=monthRecords().filter(r=>r.type==='expense');
   const bar=document.getElementById('catBar'), list=document.getElementById('catList');
@@ -339,7 +355,6 @@ function renderChart(){
   exps.forEach(r=>map[r.cat]=(map[r.cat]||0)+r.amount);
   const total=exps.reduce((s,r)=>s+r.amount,0);
   const arr=Object.entries(map).sort((a,b)=>b[1]-a[1]);
-
   bar.innerHTML=arr.map((x,i)=>`<i style="width:${x[1]/total*100}%;background:${COLORS[i%COLORS.length]}"></i>`).join('');
   const iconOf=n=>{ const c=cats.expense.find(c=>c.name===n); return c?c.icon:'📦'; };
   list.innerHTML=arr.map((x,i)=>`
@@ -349,8 +364,6 @@ function renderChart(){
       <span class="cat-pct">${(x[1]/total*100).toFixed(1)}%</span>
       <span class="cat-amt">${fmt(x[1])}</span>
     </div>`).join('');
-
-  // 图表页：近6个月趋势（纯 CSS 柱状图）
   if(chartArea){
     let html='';
     const months=[];
@@ -375,7 +388,6 @@ function renderChart(){
     chartArea.innerHTML=html;
   }
 }
-
 function renderRecords(){
   const box=document.getElementById('recordList');
   const list=monthRecords().sort((a,b)=> b.date.localeCompare(a.date) || b.createdAt-a.createdAt);
@@ -402,8 +414,7 @@ function renderRecords(){
   });
   box.innerHTML=html;
 }
-
-/* ================= 记一笔 ================= */
+/* ================= 记一笔（收支） ================= */
 function openSheet(id){
   editingId=id||null;
   document.getElementById('sheetTitle').textContent=id?'编辑记录':'记一笔';
@@ -421,6 +432,11 @@ function closeSheet(){
   document.getElementById('mask').classList.remove('show');
   document.getElementById('sheet').classList.remove('show');
 }
+function closeMask(){
+  document.getElementById('mask').classList.remove('show');
+  document.getElementById('sheet').classList.remove('show');
+  document.getElementById('stockSheet').classList.remove('show');
+}
 function setType(t){
   curType=t;
   document.getElementById('btnExpense').className=(t==='expense')?'on-exp':'';
@@ -437,17 +453,13 @@ function renderCatGrid(){
     + `<div class="ci add" onclick="switchPage('settings');closeSheet()"><div class="ico">＋</div><span>管理</span></div>`;
 }
 function pickCat(n){ curCat=n; renderCatGrid(); }
-
-/* 数字键盘（支持 a+b 累加） */
 function pressKey(k){
   const el=document.getElementById('amount');
   let v=el.value;
   if(k==='clear') v='';
   else if(k==='del') v=v.slice(0,-1);
-  else if(k==='plus'){
-    if(!v||v.endsWith('+')||v.endsWith('.')) return;
-    v+='+';
-  }else if(k==='.'){
+  else if(k==='plus'){ if(!v||v.endsWith('+')||v.endsWith('.')) return; v+='+'; }
+  else if(k==='.'){
     const cur=v.split('+').pop();
     if(cur.includes('.')) return;
     v = v ? (v.endsWith('+')? v+'0.' : v+'.') : '0.';
@@ -457,14 +469,6 @@ function pressKey(k){
   }
   el.value=v;
 }
-function calcAmount(v){
-  if(!v) return NaN;
-  const parts=v.split('+');
-  for(const p of parts){ if(p===''||p==='.'||!/^\d*\.?\d{0,2}$/.test(p)) return NaN; }
-  const sum=parts.reduce((s,p)=>s+(parseFloat(p)||0),0);
-  return Math.round(sum*100)/100;
-}
-
 function saveRecord(){
   const amt=calcAmount(document.getElementById('amount').value);
   if(isNaN(amt)||amt<=0) return toast('请输入正确金额');
@@ -481,46 +485,44 @@ function saveRecord(){
     toast('记账成功 ✔');
   }
   save(LS_REC,records); closeSheet();
-  // 若记录日期不属于当前查看月份，自动跳转
   const m=date.slice(0,7), cm=monthStr(curMonth);
   if(m!==cm){ curMonth=new Date(m+'-01T00:00:00'); }
   renderAll();
-
-/* PWA 快捷方式深链：index.html?add=expense / ?add=income */
-(function(){
-  try{
-    const q = new URLSearchParams(location.search);
-    const t = q.get('add');
-    if(t === 'expense' || t === 'income'){
-      history.replaceState({}, '', location.pathname);
-      setTimeout(function(){ openSheet(); setType(t); }, 120);
-    }
-  }catch(e){ console.log(e); }
-})();
+  (function(){
+    try{
+      const q = new URLSearchParams(location.search);
+      const t = q.get('add');
+      if(t === 'expense' || t === 'income'){
+        history.replaceState({}, '', location.pathname);
+        setTimeout(function(){ openSheet(); setType(t); }, 120);
+      }
+    }catch(e){ console.log(e); }
+  })();
 }
 function editRecord(id){ openSheet(id); }
-
 /* ================= 月份切换 ================= */
 function changeMonth(n){ curMonth.setMonth(curMonth.getMonth()+n); renderAll(); }
-
 /* ================= 页面切换 ================= */
 function switchPage(p){
   curPage=p;
   const home=document.getElementById('pageHome'), set=document.getElementById('pageSettings');
-  const chart=document.getElementById('pageChart');
+  const chart=document.getElementById('pageChart'), stock=document.getElementById('pageStock');
   home.style.display=(p==='home')?'block':'none';
   set.style.display=(p==='settings')?'block':'none';
   chart.style.display=(p==='chart')?'block':'none';
-  document.getElementById('monthSwitch').style.display=(p==='chart')?'flex':'flex';
+  stock.style.display=(p==='stock')?'block':'none';
+  document.getElementById('monthSwitch').style.display=(p==='stock')?'none':'flex';
   document.getElementById('tabHome').classList.toggle('on',p==='home');
   document.getElementById('tabChart').classList.toggle('on',p==='chart');
+  document.getElementById('tabStock').classList.toggle('on',p==='stock');
   document.getElementById('tabSettings').classList.toggle('on',p==='settings');
-  document.getElementById('pageTitle').textContent=p==='settings'?'设置':p==='chart'?'统计报表':'随手记';
+  document.getElementById('pageTitle').textContent=p==='settings'?'设置':p==='chart'?'统计报表':p==='stock'?'股票':'随手记';
   if(p==='settings') renderCatManage();
   if(p==='chart') renderChart();
+  if(p==='stock') renderStock();
 }
-
-/* ================= 统计页容器（动态插入） ================= */
+function openAdd(){ (curPage==='stock')?openStockSheet():openSheet(); }
+/* ================= 统计页容器 ================= */
 (function(){
   const div=document.createElement('div');
   div.id='pageChart'; div.style.display='none';
@@ -532,8 +534,6 @@ function switchPage(p){
       <div class="bar" id="catBar2"></div><div class="cat-list" id="catList2"></div></div>`;
   document.getElementById('pageSettings').after(div);
 })();
-
-/* 让 renderChart 同时写入统计页的容器 */
 const _origRenderChart=renderChart;
 renderChart=function(){
   _origRenderChart();
@@ -542,7 +542,6 @@ renderChart=function(){
   if(b2&&bar) b2.innerHTML=bar.innerHTML;
   if(l2&&list) l2.innerHTML=list.innerHTML;
 };
-
 /* ================= 分类管理 ================= */
 function renderCatManage(){
   const box=document.getElementById('catManage');
@@ -559,7 +558,7 @@ function addCategory(){
   const n=document.getElementById('newCatName').value.trim();
   const ic=document.getElementById('newCatIcon').value.trim()||'🏷️';
   if(!n) return toast('请输入分类名称');
-  const t=(curType==='income')?'expense':curType; // 默认加到支出
+  const t=document.getElementById('catAddType').value; // 修复：按下拉选择的类型添加
   if(cats[t].some(c=>c.name===n)) return toast('分类已存在');
   cats[t].push({name:n,icon:ic});
   save(LS_CAT,cats);
@@ -572,10 +571,114 @@ function delCategory(t,i){
   if(!confirm(`删除分类「${c.name}」？已有记录不受影响。`)) return;
   cats[t].splice(i,1); save(LS_CAT,cats); renderCatManage();
 }
-
+/* ================= 股票买卖 ================= */
+let curDir='buy';
+function setDir(d){
+  curDir=d;
+  document.getElementById('btnBuy').className=(d==='buy')?'on-exp':'';
+  document.getElementById('btnSell').className=(d==='sell')?'on-inc':'';
+}
+function openStockSheet(){
+  document.getElementById('stockFormTitle').textContent='记一笔买卖';
+  document.getElementById('stCode').value='';
+  document.getElementById('stName').value='';
+  document.getElementById('stPrice').value='';
+  document.getElementById('stQty').value='';
+  document.getElementById('stFee').value='';
+  document.getElementById('stDate').value=todayStr();
+  setDir('buy');
+  document.getElementById('mask').classList.add('show');
+  document.getElementById('stockSheet').classList.add('show');
+}
+function closeStockSheet(){
+  document.getElementById('mask').classList.remove('show');
+  document.getElementById('stockSheet').classList.remove('show');
+}
+function saveStockTrade(){
+  const code=document.getElementById('stCode').value.trim();
+  const name=document.getElementById('stName').value.trim();
+  const price=parseFloat(document.getElementById('stPrice').value);
+  const qty=parseInt(document.getElementById('stQty').value);
+  const fee=parseFloat(document.getElementById('stFee').value)||0;
+  const date=document.getElementById('stDate').value||todayStr();
+  if(!code && !name) return toast('请输入股票代码或名称');
+  if(!(price>0)) return toast('请输入每股价格');
+  if(!(qty>0)) return toast('请输入股数');
+  if(fee<0) return toast('手续费不能为负');
+  stocks.push({id:Date.now()+''+Math.random().toString(36).slice(2,6),
+    dir:curDir, code:code||name, name:name||code, price:price, qty:qty, fee:fee, date:date, createdAt:Date.now()});
+  save(LS_STOCK,stocks); closeStockSheet(); renderStock();
+  toast(curDir==='buy'?'买入已记录 ✔':'卖出已记录 ✔');
+}
+function delStockTrade(id){
+  if(!confirm('删除这条交易记录？')) return;
+  stocks=stocks.filter(s=>s.id!==id);
+  save(LS_STOCK,stocks); renderStock();
+}
+/* 计算持仓与已实现盈亏（移动加权平均成本法） */
+function stockStats(){
+  const list=[...stocks].sort((a,b)=> a.date.localeCompare(b.date) || a.createdAt-b.createdAt);
+  const pos={}; let realized=0, feeSum=0;
+  list.forEach(t=>{
+    if(!pos[t.code]) pos[t.code]={code:t.code,name:t.name,qty:0,cost:0,real:0,fee:0};
+    const p=pos[t.code]; if(t.name) p.name=t.name;
+    p.fee+=t.fee; feeSum+=t.fee;
+    if(t.dir==='buy'){
+      p.cost += t.price*t.qty + t.fee;   // 买入：手续费计入持仓成本
+      p.qty  += t.qty;
+    }else{
+      const avg = p.qty>0 ? p.cost/p.qty : t.price;
+      const costOut = avg*t.qty;
+      const pl = (t.price*t.qty - t.fee) - costOut; // 卖出净额 - 对应成本
+      p.real += pl; realized += pl;
+      p.qty -= t.qty; p.cost -= costOut;
+      if(p.qty<=0){ p.qty=0; p.cost=0; }
+    }
+  });
+  const arr=Object.values(pos);
+  const holdCost=arr.reduce((s,p)=>s+p.cost,0);
+  const holdQty=arr.reduce((s,p)=>s+p.qty,0);
+  return {arr, realized, feeSum, holdCost, holdQty};
+}
+function renderStock(){
+  const box=document.getElementById('stockBody');
+  const list=[...stocks].sort((a,b)=> b.date.localeCompare(a.date) || b.createdAt-a.createdAt);
+  const {arr,realized,feeSum,holdCost,holdQty}=stockStats();
+  document.getElementById('stHold').textContent=holdQty.toLocaleString();
+  document.getElementById('stCost').textContent=fmt(holdCost);
+  const rl=document.getElementById('stReal');
+  rl.textContent=(realized>=0?'+':'-')+Math.abs(realized).toFixed(2);
+  rl.style.color = realized>=0 ? '#ffd166' : '#bbf7d0';
+  document.getElementById('stFeeSum').textContent=fmt(feeSum);
+  if(!list.length){ box.innerHTML='<div class="empty-tip" style="padding:40px 0">还没有股票记录，点下方 ＋ 记一笔买卖</div>'; return; }
+  let html='';
+  const holding=arr.filter(p=>p.qty>0);
+  if(holding.length){
+    html+='<div class="panel" style="margin:0 0 12px"><h3>当前持仓（'+holding.length+'）</h3>';
+    holding.forEach(p=>{
+      const avg=p.qty>0?p.cost/p.qty:0;
+      html+=`<div class="cat-row"><span class="cat-name">${esc(p.name)} <span style="color:var(--sub);font-size:11px">${esc(p.code)}</span></span>
+        <span class="cat-pct">${p.qty}股</span>
+        <span class="cat-amt">成本 ${avg.toFixed(3)}</span></div>`;
+    });
+    html+='</div>';
+  }
+  html+='<div class="day-group"><div class="day-head"><span>交易明细</span><span></span></div>';
+  list.forEach(t=>{
+    html+=`<div class="rec ${t.dir==='sell'?'income':'expense'}">
+      <div class="rec-icon">${t.dir==='buy'?'🔴':'🟢'}</div>
+      <div class="rec-mid"><div class="rec-cat">${t.dir==='buy'?'买入':'卖出'} · ${esc(t.name)}</div>
+        <div class="rec-note">${t.date} ｜ ${t.price} × ${t.qty}${t.fee?(' ｜ 手续费 '+t.fee):''}</div></div>
+      <div class="rec-amt">${(t.price*t.qty).toFixed(2)}</div>
+      <div class="rec-actions"><button onclick="delStockTrade('${t.id}')">🗑</button></div>
+    </div>`;
+  });
+  html+='</div>';
+  box.innerHTML=html;
+}
 /* ================= 导入导出 ================= */
 function exportData(){
-  const blob=new Blob([JSON.stringify({records,cats,exportAt:new Date().toISOString()},null,2)],{type:'application/json'});
+  const blob=new Blob([JSON.stringify({records,cats,stocks,exportAt:new Date().toISOString()},null,2)],{type:'application/json'});
   const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
   a.download='随手记备份_'+todayStr()+'.json'; a.click(); URL.revokeObjectURL(a.href);
 }
@@ -587,8 +690,8 @@ function importData(e){
       const d=JSON.parse(rd.result);
       if(!Array.isArray(d.records)) throw 0;
       if(!confirm(`将导入 ${d.records.length} 条记录，覆盖当前全部数据，确定吗？`)) return;
-      records=d.records; if(d.cats) cats=d.cats;
-      save(LS_REC,records); save(LS_CAT,cats); renderAll(); toast('导入成功');
+      records=d.records; if(d.cats) cats=d.cats; if(Array.isArray(d.stocks)) stocks=d.stocks;
+      save(LS_REC,records); save(LS_CAT,cats); save(LS_STOCK,stocks); renderAll(); renderStock(); toast('导入成功');
     }catch(err){ toast('文件格式不正确'); }
   };
   rd.readAsText(f); e.target.value='';
@@ -597,40 +700,11 @@ function clearRecords(){
   if(!confirm('确定清空所有记账记录？此操作不可恢复，建议先导出备份。')) return;
   records=[]; save(LS_REC,records); renderAll(); toast('已清空');
 }
-
 /* ================= 启动 ================= */
-/* 修正：千分位格式化与金额校验（覆盖上方同名函数，避免转义问题） */
-function fmt(n){
-  const neg = Number(n) < 0;
-  const s = Math.abs(Number(n)).toLocaleString('en-US',
-      {minimumFractionDigits: 2, maximumFractionDigits: 2});
-  return (neg ? '-¥' : '¥') + s;
-}
-function isMoneyToken(p){
-  if(p === '' || p === '.') return false;
-  const dot = p.indexOf('.');
-  if(dot >= 0 && p.indexOf('.', dot + 1) >= 0) return false;
-  const intPart = dot >= 0 ? p.slice(0, dot) : p;
-  const decPart = dot >= 0 ? p.slice(dot + 1) : '';
-  if(decPart.length > 2) return false;
-  return (intPart + decPart).split('').every(function(ch){ return ch >= '0' && ch <= '9'; });
-}
-function calcAmount(v){
-  if(!v) return NaN;
-  const parts = v.split('+');
-  for(let i = 0; i < parts.length; i++){
-    if(!isMoneyToken(parts[i])) return NaN;
-  }
-  const sum = parts.reduce(function(s, p){ return s + (parseFloat(p) || 0); }, 0);
-  return Math.round(sum * 100) / 100;
-}
-
 document.body.insertAdjacentHTML('beforeend','<div class="toast" id="toast"></div>');
 renderAll();
-
-/* ================= PWA：离线缓存 + 更新提示 ================= */
+/* ================= PWA：离线 + 更新提示 ================= */
 (function(){
-  // 离线状态小徽标
   const css = '#netBadge{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:60;'
     + 'background:#ef4444;color:#fff;font-size:11px;padding:4px 12px;border-radius:20px;display:none}'
     + '#netBadge.off{display:block}';
@@ -640,7 +714,6 @@ renderAll();
   window.addEventListener('online', syncNet);
   window.addEventListener('offline', syncNet);
   syncNet();
-
   if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost' || location.hostname==='127.0.0.1')){
     let refreshing=false;
     navigator.serviceWorker.register('sw.js').then(function(reg){
@@ -649,12 +722,9 @@ renderAll();
         if(!nw) return;
         nw.addEventListener('statechange', function(){
           if(nw.state==='activated' && !refreshing){
-            // 首次安装静默生效，后续版本更新才提示
             if(localStorage.getItem('ssj_installed')){
               if(confirm('发现新版本，立即更新？')){ location.reload(); }
-            }else{
-              localStorage.setItem('ssj_installed','1');
-            }
+            }else{ localStorage.setItem('ssj_installed','1'); }
           }
         });
       });
